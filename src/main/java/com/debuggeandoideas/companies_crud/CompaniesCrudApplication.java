@@ -2,8 +2,10 @@ package com.debuggeandoideas.companies_crud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages = "com.debuggeandoideas.companies_crud")
 public class CompaniesCrudApplication {
 
 	public static void main(String[] args) {
