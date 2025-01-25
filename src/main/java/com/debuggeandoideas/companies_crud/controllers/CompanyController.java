@@ -22,9 +22,15 @@ public class CompanyController {
     @Operation(summary = "get a company given a company name")
     @GetMapping(path = "{name}")
     public ResponseEntity<Company> get(@PathVariable String name){
-        log.info("GET: company {}", name);
+      /*  try{
+            Thread.sleep(5000);*/
+            log.info("GET: company {}", name);
 
-        return ResponseEntity.ok(this.companyService.readByName(name));
+            return ResponseEntity.ok(this.companyService.readByName(name));
+        /*} catch (InterruptedException e){
+            throw new RuntimeException(e);
+        }*/
+
     }
     @Operation(summary = "save in DB a company given a company from body")
     @PostMapping
